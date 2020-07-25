@@ -30,7 +30,7 @@ class Api::V1::SessionsController < ApplicationController
     end
   end
 
-  def is_admin?
+  def admin_logged_in?
     if is_admin? && current_user
       render json: {
         admin: true,

@@ -5,7 +5,7 @@ Rails.application.routes.draw do
       post '/login', to: 'sessions#create'
       delete '/logout', to: 'sessions#destroy'
       get '/logged_in', to: 'sessions#is_logged_in?'
-      get '/admin_logged_in', to: 'sessions#is_admin?'
+      get '/admin_logged_in', to: 'sessions#admin_logged_in?'
       resources :users
       resources :pedals
       get '/random' => 'pedals#random'
